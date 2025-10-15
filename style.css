@@ -196,7 +196,7 @@ h2 {
 
 .about-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
 }
 
@@ -275,4 +275,5 @@ h2 {
         flex-direction: column;
         text-align: center;
     }
+
 }
