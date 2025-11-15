@@ -1,110 +1,252 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أحمد علي | مصمم جرافيك</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahmed Designer | مصمم جرافيك</title>
+
+    <!-- خط من جوجل (اختياري) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- ملف التنسيق -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">أحمد علي</a>
-            <ul class="nav-links">
-                <li><a href="#hero">الرئيسية</a></li>
-                <li><a href="#portfolio">أعمالي</a></li>
-                <li><a href="#about">عني</a></li>
-                <li><a href="#contact">تواصل معي</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header id="hero" class="hero">
-        <div class="container">
-            <h1>أهلاً بك، أنا أحمد علي</h1>
-            <p>مصمم جرافيك متخصص في بناء الهويات البصرية الجذابة وتصميمات السوشيال ميديا المبتكرة.</p>
-            <a href="#portfolio" class="btn">شاهد أعمالي</a>
+    <!-- شريط علوي -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">Ahmed<span>Designer</span></div>
+            <nav>
+                <a href="#hero">الرئيسية</a>
+                <a href="#services">الخدمات</a>
+                <a href="#portfolio">الأعمال</a>
+                <a href="#about">عنّي</a>
+                <a href="#contact">تواصل</a>
+            </nav>
         </div>
     </header>
 
-    <section id="portfolio" class="portfolio">
+    <!-- هيرو -->
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="hero-tag">مصمم جرافيك مستقل</p>
+                <h1>بعمل تصاميم سوشيال ميديا <span>تشدّ العين</span> وتعلّي البراند</h1>
+                <p class="hero-sub">
+                    لو عندك براند، صفحة، قناة أو مشروع وعايز شكل احترافي ومختلف،
+                    أنا بخليك تطلع بأفضل صورة ممكنة قدام جمهورك.
+                </p>
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn primary">شوف شغلي</a>
+                    <a href="#contact" class="btn ghost">كلّمني في مشروعك</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <h3>+50</h3>
+                        <p>مشروع مكتمل</p>
+                    </div>
+                    <div>
+                        <h3>+30</h3>
+                        <p>عميل مبسوط</p>
+                    </div>
+                    <div>
+                        <h3>+3</h3>
+                        <p>سنين خبرة</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-badge">Ready to Design</div>
+                <div class="hero-avatar">
+                    <div class="circle big"></div>
+                    <div class="circle small"></div>
+                    <div class="avatar-text">
+                        <h2>Ahmed Ali</h2>
+                        <p>Graphic / Social Media Designer</p>
+                    </div>
+                </div>
+                <div class="hero-highlight">
+                    <p>متخصّص في:</p>
+                    <ul>
+                        <li>تصاميم سوشيال ميديا</li>
+                        <li>هويات بصرية (لوجو + براند)</li>
+                        <li>بنرات وإعلانات ممولة</li>
+                    </ul>
+                </div>
+                <div class="hero-tags">
+                    <span>#Photoshop</span>
+                    <span>#Illustrator</span>
+                    <span>#Branding</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الخدمات -->
+    <section id="services" class="section">
         <div class="container">
-            <h2>أعمالي</h2>
-            <div class="portfolio-filter">
-                <button class="filter-btn active" data-filter="all">الكل</button>
-                <button class="filter-btn" data-filter="logo">شعارات</button>
-                <button class="filter-btn" data-filter="social">سوشيال ميديا</button>
-                <button class="filter-btn" data-filter="branding">هويات بصرية</button>
+            <div class="section-head">
+                <p class="section-label">الخدمات</p>
+                <h2>إزاي أقدر أساعدك؟</h2>
+                <p>بقدّم لك باقة خدمات متكاملة تساعدك تبني وجود قوي أونلاين.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>تصاميم سوشيال ميديا</h3>
+                    <p>
+                        بوستات وانستجرام ستوريز وفيسبوك أدز بتصميم جذاب ومتناسق مع
+                        هوية البراند بتاعك.
+                    </p>
+                    <ul>
+                        <li>باكدجات شهرية</li>
+                        <li>ستايل موحّد للحساب</li>
+                        <li>جاهز للنشر مباشرة</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>لوجو وهوية بصرية</h3>
+                    <p>
+                        تصميم شعار احترافي + ألوان وخطوط واستخدامات تخلي البراند
+                        ليه شخصية واضحة.
+                    </p>
+                    <ul>
+                        <li>أكثر من فكرة لوجو</li>
+                        <li>ملفات عالية الجودة</li>
+                        <li>ملف استخدام الهوية</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>ماتريال إعلاني</h3>
+                    <p>
+                        بنرات، بوسترات، رول أب، كوفرات، ثيم كامل لحملات الإعلان
+                        الممول.
+                    </p>
+                    <ul>
+                        <li> مناسب للطباعة والديجيتال</li>
+                        <li> تصميم جاهز للتعديل</li>
+                        <li> دعم التعديلات</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الأعمال -->
+    <section id="portfolio" class="section alt">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-label">الأعمال</p>
+                <h2>شوية من شغلي</h2>
+                <p>دي عينات بسيطة، أقدر أبعتلك البورتفوليو الكامل وقت ما تحب.</p>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="logo">
-                    <img src="images/project1.jpg" alt="Brand Juice Fresh">
-                    <div class="overlay"><h3>Brand Juice Fresh</h3></div>
+                <div class="portfolio-item">
+                    <div class="mockup"></div>
+                    <h3>حملة سوشيال لمطعم</h3>
+                    <p>ستوري + بوستات لانستجرام مع هوية لونية خاصة.</p>
                 </div>
-                <div class="portfolio-item" data-category="social">
-                    <img src="images/project2.jpg" alt="تصميمات سوشيال ميديا لمطعم">
-                    <div class="overlay"><h3>حملة إعلانية لمطعم Pizza Time</h3></div>
+                <div class="portfolio-item">
+                    <div class="mockup"></div>
+                    <h3>لوجو براند ملابس</h3>
+                    <p>لوجو تايبوجرافي بسيط يناسب الطباعة على التيشيرتات.</p>
                 </div>
-                <div class="portfolio-item" data-category="branding">
-                    <img src="images/project3.jpg" alt="هوية بصرية كاملة لعلامة تجارية">
-                    <div class="overlay"><h3>الهوية البصرية لـ "كافيين كافيه"</h3></div>
+                <div class="portfolio-item">
+                    <div class="mockup"></div>
+                    <h3>بوست إعلان ممول</h3>
+                    <p>تصميم بإستايل مودرن لمتجر إلكتروني.</p>
                 </div>
-                <div class="portfolio-item" data-category="logo">
-                    <img src="images/project4.jpg" alt="تصميم شعار لمتجر إلكتروني">
-                    <div class="overlay"><h3>شعار متجر Urban Wear</h3></div>
-                </div>
-                 <div class="portfolio-item" data-category="social">
-                    <img src="images/project5.jpg" alt="تصميمات انستغرام لمدرب رياضي">
-                    <div class="overlay"><h3>تصميمات انستغرام</h3></div>
-                </div>
-                 <div class="portfolio-item" data-category="branding">
-                    <img src="images/project6.jpg" alt="تصميم هوية لتطبيق جوال">
-                    <div class="overlay"><h3>هوية تطبيق "Connect"</h3></div>
+                <div class="portfolio-item">
+                    <div class="mockup"></div>
+                    <h3>هوية كاملة لكافيه</h3>
+                    <p>لوجو + منيو + سوشيال ميديا كيت.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>عني</h2>
-            <div class="about-content">
-                <img src="images/profile-photo.jpg" alt="صورة أحمد علي الشخصية" class="profile-pic">
-                <p>أنا أحمد علي، مصمم جرافيك شغوف لدي خبرة تزيد عن 1 من السنوات في مجال التصميم. أعمل على مساعدة الشركات والأفراد على بناء هوية بصرية قوية وجذابة. أستخدم أحدث برامج التصميم مثل Adobe Photoshop و Illustrator لتقديم أعمال احترافية تلبي تطلعات العملاء. أسعى دائمًا لتعلم كل ما هو جديد في عالم التصميم.</p>
+    <!-- عني -->
+    <section id="about" class="section">
+        <div class="container about-wrapper">
+            <div class="about-text">
+                <div class="section-head small">
+                    <p class="section-label">عنّي</p>
+                    <h2>مين أحمد علي؟</h2>
+                </div>
+                <p>
+                    أنا مصمم جرافيك مهتم بالبراندينج وتصاميم السوشيال ميديا. بحب أشتغل
+                    مع البراندات الناشئة وأساعدهم يطلعوا بشكل محترف قدام جمهورهم،
+                    بأفكار بسيطة لكن مؤثرة.
+                </p>
+                <p>
+                    شغلي دايمًا بيكون مبني على فهم طبيعة البيزنس والجمهور المستهدف،
+                    مش مجرد شكل حلو وبس. بحب كمان أتابع الترندات الجديدة في التصميم
+                    والتسويق بحيث الشغل يطلع مودرن ومناسب للسوق.
+                </p>
+                <ul class="about-list">
+                    <li>استخدام برامج Adobe (Photoshop - Illustrator)</li>
+                    <li>الالتزام بالمواعيد والتسليم بجودة عالية</li>
+                    <li>مرونة في التعديلات لحد ما نوصل لأفضل نتيجة</li>
+                </ul>
+            </div>
+            <div class="about-side-card">
+                <h3>جاهز نبدأ دلوقتي 👇</h3>
+                <p>ابعتلي تفاصيل مشروعك وأنا أرد عليك بأفضل عرض وسعر يناسبك.</p>
+                <a href="#contact" class="btn primary full">تواصل معايا</a>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <!-- تواصل -->
+    <section id="contact" class="section alt">
         <div class="container">
-            <h2>تواصل معي</h2>
-            <p>هل لديك مشروع جديد؟ لا تتردد في التواصل معي!</p>
-            <form class="contact-form">
-                <input type="text" placeholder="الاسم" required>
-                <input type="email" placeholder="البريد الإلكتروني" required>
-                <textarea placeholder="رسالتك" rows="5" required></textarea>
-                <button type="submit" class="btn">إرسال</button>
-            </form>
+            <div class="section-head">
+                <p class="section-label">تواصل</p>
+                <h2>خلينا نشتغل مع بعض</h2>
+                <p>اكتبلي رسالة بسيطة عن مشروعك وهرد عليك بأسرع وقت.</p>
+            </div>
+            <div class="contact-grid">
+                <form class="contact-form">
+                    <div class="field">
+                        <label>الاسم</label>
+                        <input type="text" placeholder="اكتب اسمك الكامل" />
+                    </div>
+                    <div class="field">
+                        <label>الإيميل</label>
+                        <input type="email" placeholder="example@mail.com" />
+                    </div>
+                    <div class="field">
+                        <label>تفاصيل المشروع</label>
+                        <textarea rows="4" placeholder="احكيلي عن نوع التصاميم اللي محتاجها..."></textarea>
+                    </div>
+                    <button type="submit" class="btn primary full">إرسال الرسالة</button>
+                </form>
+                <div class="contact-info">
+                    <h3>معلومات التواصل</h3>
+                    <p>تقدر تبعتلي مباشرة على:</p>
+                    <ul>
+                        <li>واتساب: 0100 000 0000</li>
+                        <li>إيميل: yourmail@example.com</li>
+                        <li>فيسبوك / إنستجرام: @AhmedDesigner</li>
+                    </ul>
+                    <p class="note">
+                        * عدّل بيانات التواصل فوق وحط حساباتك الحقيقية.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- فوتر -->
     <footer class="footer">
-        <div class="container">
-            <div class="social-links">
-                <a href="https://www.behance.net/b3e233c3" target="_blank"><i class="fab fa-behance"></i></a>
-                <a href="https://www.instagram.com/Ahmedaliatta4" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/YourUsername" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://twitter.com/YourUsername" target="_blank"><i class="fab fa-twitter"></i></a>
-            </div>
-            <p>جميع الحقوق محفوظة &copy; 2025 - أحمد علي</p>
+        <div class="container footer-content">
+            <p>© <span id="year"></span> Ahmed Designer. كل الحقوق محفوظة.</p>
+            <p class="footer-small">مصمم بإتقان وحب للتفاصيل.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // تحديث سنة الفوتر تلقائيًا
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
-
-
-
