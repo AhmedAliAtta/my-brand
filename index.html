@@ -1,492 +1,939 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ahmed Designer | مصمم جرافيك</title>
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- خط من جوجل (اختياري) -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
+:root {
+    --bg: #050816;
+    --bg-alt: #070b1f;
+    --card: #0b1024;
+    --accent: #ff6b3d;
+    --accent-soft: rgba(255, 107, 61, 0.16);
+    --text: #f5f5f5;
+    --text-muted: #a5a7c4;
+    --border: #1b2140;
+    --radius: 18px;
+    --shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
 
-    <!-- ملف التنسيق -->
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <!-- شريط علوي -->
-    <header class="navbar">
-        <div class="container nav-content">
-            <div class="logo">Ahmed<span>Designer</span></div>
-            <nav>
-                <a href="#hero">الرئيسية</a>
-                <a href="#portfolio">الأعمال</a>
-                <a href="#skills">المهارات</a>
-                <a href="#pricing">الباقات</a>
-                <a href="#testimonials">آراء العملاء</a>
-                <a href="#contact">تواصل</a>
-            </nav>
-        </div>
-    </header>
+html,
+body {
+    height: 100%;
+}
 
-    <!-- هيرو -->
-    <section id="hero" class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <p class="hero-tag">مصمم جرافيك مستقل</p>
-                <h1>بعمل تصاميم سوشيال ميديا <span>تشدّ العين</span> وتعلّي البراند</h1>
-                <p class="hero-sub">
-                    لو عندك براند، صفحة، قناة أو مشروع وعايز شكل احترافي ومختلف،
-                    أنا بخليك تطلع بأفضل صورة ممكنة قدام جمهورك.
-                </p>
-                <div class="hero-actions">
-                    <a href="#portfolio" class="btn primary">شوف شغلي</a>
-                    <a href="#contact" class="btn ghost">كلّمني في مشروعك</a>
-                </div>
-                <div class="hero-stats">
-                    <div>
-                        <h3>+50</h3>
-                        <p>مشروع مكتمل</p>
-                    </div>
-                    <div>
-                        <h3>+30</h3>
-                        <p>عميل مبسوط</p>
-                    </div>
-                    <div>
-                        <h3>+3</h3>
-                        <p>سنين خبرة</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-card">
-                <div class="hero-badge">Ready to Design</div>
-                <div class="hero-avatar">
-                    <div class="circle big"></div>
-                    <div class="circle small"></div>
-                    <div class="avatar-text">
-                        <h2>Ahmed Ali</h2>
-                        <p>Graphic / Social Media Designer</p>
-                    </div>
-                </div>
-                <div class="hero-highlight">
-                    <p>متخصّص في:</p>
-                    <ul>
-                        <li>تصاميم سوشيال ميديا</li>
-                        <li>هويات بصرية (لوجو + براند)</li>
-                        <li>بنرات وإعلانات ممولة</li>
-                    </ul>
-                </div>
-                <div class="hero-tags">
-                    <span>#Photoshop</span>
-                    <span>#Illustrator</span>
-                    <span>#Branding</span>
-                    <span>#SocialMediaDesign</span>
-                </div>
-            </div>
-        </div>
-    </section>
+html {
+    scroll-behavior: smooth;
+}
 
-    <!-- الخدمات -->
-    <section id="services" class="section">
-        <div class="container">
-            <div class="section-head">
-                <p class="section-label">الخدمات</p>
-                <h2>إزاي أقدر أساعدك؟</h2>
-                <p>بقدّم لك باقة خدمات متكاملة تساعدك تبني وجود قوي أونلاين.</p>
-            </div>
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>تصاميم سوشيال ميديا</h3>
-                    <p>
-                        بوستات وانستجرام ستوريز وفيسبوك أدز بتصميم جذاب ومتناسق مع
-                        هوية البراند بتاعك.
-                    </p>
-                    <ul>
-                        <li>باكدجات شهرية</li>
-                        <li>ستايل موحّد للحساب</li>
-                        <li>جاهز للنشر مباشرة</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>لوجو وهوية بصرية</h3>
-                    <p>
-                        تصميم شعار احترافي + ألوان وخطوط واستخدامات تخلي البراند
-                        ليه شخصية واضحة.
-                    </p>
-                    <ul>
-                        <li>أكثر من فكرة لوجو</li>
-                        <li>ملفات عالية الجودة</li>
-                        <li>ملف استخدام الهوية</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>ماتريال إعلاني</h3>
-                    <p>
-                        بنرات، بوسترات، رول أب، كوفرات، ثيم كامل لحملات الإعلان
-                        الممول.
-                    </p>
-                    <ul>
-                        <li>مناسب للطباعة والديجيتال</li>
-                        <li>تصميم قابل للتعديل</li>
-                        <li>دعم في التعديلات</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+body {
+    font-family: "Cairo", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: radial-gradient(circle at top, #141b3f 0, #050816 38%, #02030a 100%);
+    color: var(--text);
+    line-height: 1.7;
+}
 
-    <!-- الأعمال -->
-    <section id="portfolio" class="section alt">
-        <div class="container">
-            <div class="section-head">
-                <p class="section-label">الأعمال</p>
-                <h2>شوية من شغلي</h2>
-                <p>دي عينات بسيطة، أقدر أبعتلك البورتفوليو الكامل وقت ما تحب.</p>
-            </div>
+/* حاوية عامة */
+.container {
+    width: min(1120px, 100% - 32px);
+    margin: 0 auto;
+}
 
-            <!-- فلاتر شكلية (من غير جافاسكريبت) -->
-            <div class="portfolio-filter">
-                <span class="filter-pill active">كل الأعمال</span>
-                <span class="filter-pill">سوشيال ميديا</span>
-                <span class="filter-pill">لوجوهات</span>
-                <span class="filter-pill">براند كامل</span>
-            </div>
+/* النافبار */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(16px);
+    background: linear-gradient(to bottom, rgba(5, 8, 22, 0.92), rgba(5, 8, 22, 0.75));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
 
-            <div class="portfolio-grid">
-                <div class="portfolio-item tag-social">
-                    <div class="mockup"></div>
-                    <h3>حملة سوشيال لمطعم</h3>
-                    <p>ستوري + بوستات لانستجرام مع هوية لونية خاصة.</p>
-                    <span class="pill small">سوشيال ميديا</span>
-                </div>
-                <div class="portfolio-item tag-logo">
-                    <div class="mockup mockup-alt"></div>
-                    <h3>لوجو براند ملابس</h3>
-                    <p>لوجو تايبوجرافي بسيط يناسب الطباعة على التيشيرتات.</p>
-                    <span class="pill small">لوجو</span>
-                </div>
-                <div class="portfolio-item tag-ads">
-                    <div class="mockup mockup-ads"></div>
-                    <h3>بوست إعلان ممول</h3>
-                    <p>تصميم بإستايل مودرن لمتجر إلكتروني.</p>
-                    <span class="pill small">إعلان ممول</span>
-                </div>
-                <div class="portfolio-item tag-brand">
-                    <div class="mockup mockup-brand"></div>
-                    <h3>هوية كاملة لكافيه</h3>
-                    <p>لوجو + منيو + سوشيال ميديا كيت.</p>
-                    <span class="pill small">براند كامل</span>
-                </div>
-            </div>
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
 
-            <div class="portfolio-cta">
-                <p>عندك شغل جاهز؟</p>
-                <a href="#contact" class="btn ghost">اطلب لينك البورتفوليو الكامل</a>
-            </div>
-        </div>
-    </section>
+.logo {
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
 
-    <!-- المهارات -->
-    <section id="skills" class="section">
-        <div class="container">
-            <div class="section-head">
-                <p class="section-label">المهارات</p>
-                <h2>أنا شاطر في إيه؟</h2>
-                <p>مجموعه مهارات وأدوات بستخدمها عشان أطلع شغل محترم ومتنسق.</p>
-            </div>
+.logo span {
+    color: var(--accent);
+}
 
-            <div class="skills-grid">
-                <div class="skills-card">
-                    <h3>برامج التصميم</h3>
-                    <div class="skill-row">
-                        <span>Adobe Photoshop</span>
-                        <span>متقدم</span>
-                        <div class="skill-bar">
-                            <span style="width: 90%;"></span>
-                        </div>
-                    </div>
-                    <div class="skill-row">
-                        <span>Adobe Illustrator</span>
-                        <span>متقدم</span>
-                        <div class="skill-bar">
-                            <span style="width: 85%;"></span>
-                        </div>
-                    </div>
-                    <div class="skill-row">
-                        <span>Adobe XD / Figma</span>
-                        <span>متوسط</span>
-                        <div class="skill-bar">
-                            <span style="width: 65%;"></span>
-                        </div>
-                    </div>
-                </div>
+.navbar nav {
+    display: flex;
+    gap: 18px;
+}
 
-                <div class="skills-card">
-                    <h3>نقاط القوة</h3>
-                    <ul class="skills-tags">
-                        <li>فهم قوي لالتنسيق والألوان</li>
-                        <li>ستايل مودرن يناسب السوشيال</li>
-                        <li>تحويل الفكرة لفيجوال واضح</li>
-                        <li>التزام بالمواعيد</li>
-                    </ul>
-                </div>
+.navbar nav a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding: 6px 10px;
+    border-radius: 999px;
+    transition: 0.2s ease;
+}
 
-                <div class="skills-card">
-                    <h3>مجالات بشتغل عليها</h3>
-                    <div class="skills-pill-wrap">
-                        <span class="pill">مطاعم وكافيهات</span>
-                        <span class="pill">متاجر إلكترونية</span>
-                        <span class="pill">براندات أزياء</span>
-                        <span class="pill">كورسات أونلاين</span>
-                        <span class="pill">شركات ناشئة</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.navbar nav a:hover {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.04);
+}
 
-    <!-- عني -->
-    <section id="about" class="section alt">
-        <div class="container about-wrapper">
-            <div class="about-text">
-                <div class="section-head small">
-                    <p class="section-label">عنّي</p>
-                    <h2>مين أحمد علي؟</h2>
-                </div>
-                <p>
-                    أنا مصمم جرافيك مهتم بالبراندينج وتصاميم السوشيال ميديا. بحب أشتغل
-                    مع البراندات الناشئة وأساعدهم يطلعوا بشكل محترف قدام جمهورهم،
-                    بأفكار بسيطة لكن مؤثرة.
-                </p>
-                <p>
-                    شغلي دايمًا بيكون مبني على فهم طبيعة البيزنس والجمهور المستهدف،
-                    مش مجرد شكل حلو وبس. بحب أتابع الترندات الجديدة في التصميم
-                    والتسويق بحيث الشغل يطلع مودرن ومناسب للسوق.
-                </p>
+/* هيرو */
+.hero {
+    padding: 80px 0 60px;
+}
 
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-year">2022</span>
-                        <p>بدأت أشتغل فريلانس على مشاريع صغيرة لأصحابي ومعارفي.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-year">2023</span>
-                        <p>اشتغلت مع أكتر من براند ناشئ في السوشيال ميديا والإعلانات.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-year">2024</span>
-                        <p>طورت هوية كاملة لبراندات في مجالات مختلفة (مطاعم، أزياء، تعليم).</p>
-                    </div>
-                </div>
+.hero-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+    gap: 40px;
+    align-items: center;
+}
 
-                <ul class="about-list">
-                    <li>استخدام برامج Adobe (Photoshop - Illustrator)</li>
-                    <li>الالتزام بالمواعيد والتسليم بجودة عالية</li>
-                    <li>مرونة في التعديلات لحد ما نوصل لأفضل نتيجة</li>
-                </ul>
-            </div>
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
 
-            <div class="about-side-card">
-                <h3>طريقة الشغل 👇</h3>
-                <ol class="process-list">
-                    <li>تكلمني وتشرحلي الفكرة والمجال والجمهور المستهدف.</li>
-                    <li>أبعتلك تصور، ألوان، وستايل مناسب للبراند.</li>
-                    <li>نثبت اتجاه معين، وأبدأ أشتغل على باقي التصاميم.</li>
-                    <li>تعديلات بسيطة لو محتاج، وبعدها تسليم النهائي بأعلى جودة.</li>
-                </ol>
-                <a href="#contact" class="btn primary full">جاهز نبدأ؟</a>
-            </div>
-        </div>
-    </section>
+.hero-tag::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #38ff9c;
+    box-shadow: 0 0 18px rgba(56, 255, 156, 0.7);
+}
 
-    <!-- الباقات والأسعار -->
-    <section id="pricing" class="section">
-        <div class="container">
-            <div class="section-head">
-                <p class="section-label">الباقات</p>
-                <h2>اختار الباقة اللي تناسبك</h2>
-                <p>الأسعار تقريبية، والأفضل تتواصل معايا عشان أظبطلك عرض خاص حسب مشروعك.</p>
-            </div>
+.hero h1 {
+    font-size: clamp(2.1rem, 3vw + 1rem, 3rem);
+    margin-bottom: 14px;
+}
 
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>باقة ستارت</h3>
-                    <p class="price">ابتداءً من <span>$$</span></p>
-                    <ul>
-                        <li>٥ بوستات سوشيال ميديا</li>
-                        <li>ستايل واحد بسيط موحّد</li>
-                        <li>تعديل واحد مجاني</li>
-                    </ul>
-                    <a href="#contact" class="btn ghost full">اسأل عن الباقة</a>
-                </div>
+.hero h1 span {
+    color: var(--accent);
+}
 
-                <div class="pricing-card featured">
-                    <div class="badge">الأكثر طلبًا</div>
-                    <h3>باقة برو</h3>
-                    <p class="price">ابتداءً من <span>$$$</span></p>
-                    <ul>
-                        <li>١٢ بوست سوشيال ميديا</li>
-                        <li>إعداد ستايل فيجوال للحساب</li>
-                        <li>٢ جولات تعديل</li>
-                        <li>تصميم كوفر للبيدج</li>
-                    </ul>
-                    <a href="#contact" class="btn primary full">ابدأ بالباقة دي</a>
-                </div>
+.hero-sub {
+    color: var(--text-muted);
+    max-width: 520px;
+    font-size: 0.98rem;
+    margin-bottom: 24px;
+}
 
-                <div class="pricing-card">
-                    <h3>باقة براند كامل</h3>
-                    <p class="price">ابتداءً من <span>$$$$</span></p>
-                    <ul>
-                        <li>لوجو احترافي</li>
-                        <li>هوية بصرية (ألوان + خطوط)</li>
-                        <li>٦–٨ تصاميم سوشيال</li>
-                        <li>ملف استخدام الهوية</li>
-                    </ul>
-                    <a href="#contact" class="btn ghost full">احجز مكالمة</a>
-                </div>
-            </div>
-        </div>
-    </section>
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+}
 
-    <!-- آراء العملاء -->
-    <section id="testimonials" class="section alt">
-        <div class="container">
-            <div class="section-head">
-                <p class="section-label">آراء العملاء</p>
-                <h2>الناس بتقول إيه؟</h2>
-                <p>قِسم بسيط يدي ثقة لأي حد جديد بيشوف شغلك لأول مرة.</p>
-            </div>
+/* أزرار عامة */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s ease;
+    font-weight: 600;
+}
 
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">
-                        "التعامل مع أحمد كان مريح جدًا، التزام في المواعيد وشغل يفتح النفس.
-                        البيدج فرق شكلها جدًا بعد التصاميم الجديدة."
-                    </p>
-                    <p class="testimonial-name">صاحب مطعم بيتزا</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">
-                        "ساعدنا نبني شخصية واضحة للبراند، اللوجو والهوية طلعوا أحسن من توقعاتنا."
-                    </p>
-                    <p class="testimonial-name">براند ملابس ناشئ</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">
-                        "كل ما نحتاج حملة إعلان ممول، بنتواصل مع أحمد على طول.
-                        فاهم السوشيال ومريح في الشغل."
-                    </p>
-                    <p class="testimonial-name">متجر إلكتروني</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.btn.primary {
+    background: linear-gradient(135deg, #ff6b3d, #ff9966);
+    color: #050816;
+    box-shadow: 0 14px 30px rgba(255, 107, 61, 0.45);
+}
 
-    <!-- FAQ -->
-    <section id="faq" class="section">
-        <div class="container">
-            <div class="section-head">
-                <p class="section-label">الأسئلة الشائعة</p>
-                <h2>أسئلة ممكن تيجي في بالك</h2>
-                <p>جاوبت هنا على شوية أسئلة أساسية، والباقي نكمّله في الت聊.</p>
-            </div>
+.btn.primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 40px rgba(255, 107, 61, 0.6);
+}
 
-            <div class="faq-list">
-                <details class="faq-item">
-                    <summary>بتسلّم الشغل بأي صيغة؟</summary>
-                    <p>
-                        بحسب المشروع، بس غالبًا: PNG / JPG للسوشيال، وملف PDF أو AI / PSD مفتوح لو متفقين على كده.
-                    </p>
-                </details>
+.btn.ghost {
+    border-color: rgba(255, 255, 255, 0.18);
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.02);
+}
 
-                <details class="faq-item">
-                    <summary>إزاي نظام الدفع؟</summary>
-                    <p>
-                        بيكون دفعة مقدّم (مثلاً 50%)، والباقي بعد الموافقة على الشغل النهائي، والدفع أونلاين بطرق مختلفة.
-                    </p>
-                </details>
+.btn.ghost:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
 
-                <details class="faq-item">
-                    <summary>كم تعديل مسموح؟</summary>
-                    <p>
-                        في كل باقة مكتوب عدد جولات التعديل. غالبًا بنخلص قبل ما نوصل للحد أصلاً.
-                    </p>
-                </details>
+.btn.full {
+    width: 100%;
+}
 
-                <details class="faq-item">
-                    <summary>ممكن نشتغل فترة طويلة مع بعض؟</summary>
-                    <p>
-                        أكيد، في إمكانية نعمل باكدجات شهرية للسوشيال ميديا بأسعار خاصة للتعاون المستمر.
-                    </p>
-                </details>
-            </div>
-        </div>
-    </section>
+/* أرقام صغيرة تحت الهيرو */
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
 
-    <!-- تواصل -->
-    <section id="contact" class="section alt">
-        <div class="container">
-            <div class="section-head">
-                <p class="section-label">تواصل</p>
-                <h2>خلينا نشتغل مع بعض</h2>
-                <p>اكتبلي رسالة بسيطة عن مشروعك وهرد عليك بأسرع وقت.</p>
-            </div>
-            <div class="contact-grid">
-                <form class="contact-form">
-                    <div class="field">
-                        <label>الاسم</label>
-                        <input type="text" placeholder="اكتب اسمك الكامل" />
-                    </div>
-                    <div class="field">
-                        <label>الإيميل</label>
-                        <input type="email" placeholder="example@mail.com" />
-                    </div>
-                    <div class="field">
-                        <label>تفاصيل المشروع</label>
-                        <textarea rows="4" placeholder="احكيلي عن نوع التصاميم اللي محتاجها..."></textarea>
-                    </div>
-                    <button type="submit" class="btn primary full">إرسال الرسالة</button>
-                </form>
-                <div class="contact-info">
-                    <h3>معلومات التواصل</h3>
-                    <p>تقدر تبعتلي مباشرة على:</p>
-                    <ul>
-                        <li>واتساب: 0100 000 0000</li>
-                        <li>إيميل: yourmail@example.com</li>
-                        <li>فيسبوك / إنستجرام: @AhmedDesigner</li>
-                    </ul>
-                    <p class="note">
-                        * عدّل بيانات التواصل فوق وحط حساباتك الحقيقية. ممكن كمان نضيف لينكات
-                        Behance / Dribbble لو حابب.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+.hero-stats div {
+    min-width: 90px;
+}
 
-    <!-- زر رجوع للأعلى -->
-    <a href="#hero" class="scroll-top" aria-label="العودة للأعلى">▲</a>
+.hero-stats h3 {
+    font-size: 1.25rem;
+}
 
-    <!-- زر واتساب عائم -->
-    <a
-        href="https://wa.me/201000000000"
-        class="floating-whatsapp"
-        target="_blank"
-        rel="noopener"
-        aria-label="تواصل على واتساب"
-    >
-        واتساب
-    </a>
+.hero-stats p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
 
-    <!-- فوتر -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>© <span id="year"></span> Ahmed Designer. كل الحقوق محفوظة.</p>
-            <p class="footer-small">مصمم بإتقان وحب للتفاصيل.</p>
-        </div>
-    </footer>
+/* كارت الهيرو */
+.hero-card {
+    background: radial-gradient(circle at top left, #1e2648 0, #0b1024 42%, #050816 100%);
+    border-radius: 24px;
+    padding: 20px 18px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
 
-    <script>
-        // تحديث سنة الفوتر تلقائيًا
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-</body>
-</html>
+.hero-badge {
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.hero-avatar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 12px 0 20px;
+}
+
+.circle {
+    border-radius: 999px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: radial-gradient(circle at 30% 20%, #ff9966, #ff6b3d 38%, #050816 100%);
+}
+
+.circle.big {
+    width: 74px;
+    height: 74px;
+}
+
+.circle.small {
+    width: 36px;
+    height: 36px;
+    margin-top: 34px;
+    margin-right: -22px;
+    opacity: 0.85;
+}
+
+.avatar-text h2 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.avatar-text p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.hero-highlight {
+    background: rgba(0, 0, 0, 0.38);
+    border-radius: 18px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 16px;
+}
+
+.hero-highlight p {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+}
+
+.hero-highlight ul {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    list-style: disc;
+    padding-right: 18px;
+}
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.75rem;
+}
+
+.hero-tags span {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    border: 1px solid rgba(255, 107, 61, 0.4);
+}
+
+/* سيكشن عام */
+.section {
+    padding: 70px 0;
+}
+
+.section.alt {
+    background: radial-gradient(circle at top, #090f29 0, #050816 32%, #050816 100%);
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-head.small {
+    text-align: right;
+}
+
+.section-label {
+    display: inline-flex;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: var(--accent);
+    background: rgba(255, 107, 61, 0.09);
+    border: 1px solid rgba(255, 107, 61, 0.45);
+    margin-bottom: 10px;
+}
+
+.section-head h2 {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+}
+
+.section-head p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* كروت الخدمات */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 18px 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 32px rgba(0, 0, 0, 0.48);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 107, 61, 0.55);
+    box-shadow: 0 26px 46px rgba(0, 0, 0, 0.68);
+}
+
+.card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.card ul {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    list-style: disc;
+    padding-right: 18px;
+}
+
+/* الأعمال */
+.portfolio-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.filter-pill {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    cursor: default;
+}
+
+.filter-pill.active {
+    border-color: rgba(255, 107, 61, 0.7);
+    background: var(--accent-soft);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.portfolio-item {
+    background: rgba(6, 10, 37, 0.96);
+    border-radius: var(--radius);
+    padding: 10px 10px 14px;
+    border: 1px solid var(--border);
+    transition: 0.18s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.portfolio-item h3 {
+    font-size: 0.94rem;
+    margin: 6px 0 4px;
+}
+
+.portfolio-item p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.mockup {
+    border-radius: 14px;
+    height: 120px;
+    background:
+        linear-gradient(135deg, rgba(255, 107, 61, 0.05), rgba(255, 107, 61, 0.42)),
+        url("https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&w=800")
+        center/cover no-repeat;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mockup-alt {
+    background:
+        linear-gradient(135deg, rgba(99, 132, 255, 0.16), rgba(161, 99, 255, 0.42)),
+        url("https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&w=800")
+        center/cover no-repeat;
+}
+
+.mockup-ads {
+    background:
+        linear-gradient(135deg, rgba(99, 255, 203, 0.16), rgba(99, 169, 255, 0.36)),
+        url("https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&w=800")
+        center/cover no-repeat;
+}
+
+.mockup-brand {
+    background:
+        linear-gradient(135deg, rgba(255, 193, 99, 0.16), rgba(255, 137, 99, 0.42)),
+        url("https://images.pexels.com/photos/4348403/pexels-photo-4348403.jpeg?auto=compress&w=800")
+        center/cover no-repeat;
+}
+
+.portfolio-cta {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.portfolio-cta .btn {
+    margin-right: 8px;
+}
+
+/* المهارات */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.skills-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 18px 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.skills-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.skill-row {
+    margin-bottom: 10px;
+    font-size: 0.84rem;
+}
+
+.skill-row span:first-child {
+    color: var(--text-muted);
+}
+
+.skill-row span:nth-child(2) {
+    float: left;
+    color: var(--text-muted);
+}
+
+.skill-bar {
+    clear: both;
+    margin-top: 4px;
+    width: 100%;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+}
+
+.skill-bar span {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff6b3d, #ff9966);
+}
+
+.skills-tags {
+    list-style: disc;
+    padding-right: 18px;
+    font-size: 0.86rem;
+    color: var(--text-muted);
+}
+
+.skills-tags li + li {
+    margin-top: 4px;
+}
+
+.skills-pill-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.pill.small {
+    margin-top: 6px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* عني + تايملاين */
+.about-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.1fr);
+    gap: 26px;
+    align-items: flex-start;
+}
+
+.about-text p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.about-list {
+    list-style: disc;
+    padding-right: 18px;
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+.timeline {
+    margin: 14px 0;
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    padding-right: 14px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-right: 16px;
+    margin-bottom: 10px;
+    font-size: 0.86rem;
+    color: var(--text-muted);
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(255, 107, 61, 0.23);
+}
+
+.timeline-year {
+    display: inline-block;
+    font-size: 0.78rem;
+    color: var(--accent);
+    margin-bottom: 2px;
+}
+
+/* كارت طريقة الشغل */
+.about-side-card {
+    background: radial-gradient(circle at top, #151b3c 0, #050816 80%);
+    border-radius: var(--radius);
+    padding: 18px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow);
+}
+
+.about-side-card h3 {
+    margin-bottom: 8px;
+}
+
+.process-list {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    padding-right: 18px;
+    margin-bottom: 14px;
+}
+
+/* الباقات */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.pricing-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 18px 16px 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.pricing-card h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.price {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+
+.price span {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.pricing-card ul {
+    list-style: disc;
+    padding-right: 18px;
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+.pricing-card ul li + li {
+    margin-top: 4px;
+}
+
+.pricing-card.featured {
+    border-color: rgba(255, 107, 61, 0.7);
+    transform: translateY(-4px);
+}
+
+.pricing-card .badge {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    border: 1px solid rgba(255, 107, 61, 0.65);
+}
+
+/* آراء العملاء */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.testimonial-card {
+    background: rgba(6, 10, 37, 0.96);
+    border-radius: var(--radius);
+    padding: 16px 14px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    font-size: 0.86rem;
+}
+
+.testimonial-text {
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.testimonial-name {
+    font-size: 0.84rem;
+    color: var(--accent);
+}
+
+/* FAQ */
+.faq-list {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--card);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+}
+
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "＋";
+    float: left;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.faq-item[open] summary::after {
+    content: "－";
+}
+
+.faq-item p {
+    margin-top: 6px;
+    font-size: 0.86rem;
+    color: var(--text-muted);
+}
+
+/* تواصل */
+.contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 26px;
+    align-items: flex-start;
+}
+
+.contact-form {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 18px 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.field {
+    margin-bottom: 12px;
+}
+
+.field label {
+    display: block;
+    font-size: 0.86rem;
+    margin-bottom: 4px;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(3, 5, 20, 0.9);
+    color: var(--text);
+    outline: none;
+    font-size: 0.86rem;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: rgba(255, 107, 61, 0.76);
+}
+
+.contact-info {
+    padding: 10px 4px;
+}
+
+.contact-info h3 {
+    margin-bottom: 6px;
+}
+
+.contact-info p,
+.contact-info li {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+}
+
+.contact-info ul {
+    list-style: none;
+    margin: 8px 0 6px;
+}
+
+.contact-info li + li {
+    margin-top: 4px;
+}
+
+.note {
+    font-size: 0.78rem;
+    margin-top: 4px;
+}
+
+/* زر رجوع للأعلى */
+.scroll-top {
+    position: fixed;
+    bottom: 18px;
+    left: 18px;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(5, 8, 22, 0.9);
+    color: var(--text-muted);
+    z-index: 30;
+    backdrop-filter: blur(8px);
+}
+
+/* زر واتساب عائم */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 600;
+    background: #25d366;
+    color: #050816;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+    z-index: 30;
+}
+
+/* فوتر */
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 14px 0 18px;
+    background: rgba(5, 8, 22, 0.96);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-small {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* ريسبونسيف */
+@media (max-width: 900px) {
+    .hero-content {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-card {
+        order: -1;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-wrapper,
+    .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pricing-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .navbar nav {
+        gap: 8px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-grid,
+    .portfolio-grid,
+    .skills-grid,
+    .pricing-grid,
+    .testimonials-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .navbar nav {
+        display: none; /* لو حابب نعمل منيو للموبايل ممكن نزوّدها بعدين */
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .scroll-top {
+        display: none; /* ممكن تظهرها لو حابب */
+    }
+}
