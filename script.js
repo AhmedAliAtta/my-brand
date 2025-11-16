@@ -37,6 +37,7 @@ window.addEventListener("load", revealElements);
 const scrollBtn = document.querySelector(".scroll-top");
 
 window.addEventListener("scroll", () => {
+    if (!scrollBtn) return;
     if (window.scrollY > 400) {
         scrollBtn.style.opacity = "1";
         scrollBtn.style.pointerEvents = "auto";
@@ -59,29 +60,7 @@ if (parallax) {
 }
 
 /* ============================
-   PAGE TRANSITION FADE
-=============================*/
-// fade out before navigating
-document.querySelectorAll("a").forEach(link => {
-    if (link.href.includes("#")) return;
-
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-        document.body.style.opacity = "0";
-        setTimeout(() => {
-            window.location.href = link.href;
-        }, 300);
-    });
-});
-
-// fade in on load
-window.addEventListener("load", () => {
-    document.body.style.transition = "opacity 0.6s ease";
-    document.body.style.opacity = "1";
-});
-
-/* ============================
-   SMOOTH ANCHOR FIX (MOBILE)
+   SMOOTH ANCHOR (للسكرول جوه الصفحة)
 =============================*/
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
@@ -92,3 +71,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 });
+
+/* ============================
+   LIGHTBOX PORTFOLIO
+=============================*/
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = lightbox ? lightbox.querySelector(".lightbox-img") : null;
+const lightboxClose = lightbox ? lightbox.querySelector(".lightbox-close") : null;
+
+if (lightbox && lightboxImg && lightboxClose) {
+    document.querySelectorAll(".portfolio-item-page img").forEach(img => {
+        img.addEventListener("click", () => {
+            lightboxImg.src = img.src;
+            lightbox.classList.add("open");
+        });
+    });
+
+    lightboxClose.addEventListener("click", () => {
+        lightbox.classList.remove("open");
+    });
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove("open");
+        }
+    });
+}
