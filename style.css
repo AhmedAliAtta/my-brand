@@ -106,7 +106,7 @@ nav a:hover {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
     font-weight: 900;
 }
 
@@ -173,7 +173,7 @@ nav a:hover {
 
 .section-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     font-size: 2.4rem;
     font-weight: 900;
 }
@@ -181,6 +181,14 @@ nav a:hover {
 .section-title.neon {
     color: var(--accent);
     text-shadow: 0px 0px 12px var(--accent-glow);
+}
+
+.section-sub {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: -14px;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
 }
 
 /* ================================
@@ -242,52 +250,52 @@ nav a:hover {
 }
 
 /* ================================
-   PRICING
+   PORTFOLIO GRID (داخل الصفحة)
 ==================================*/
-.price-card {
-    background: var(--card);
-    padding: 26px;
-    border-radius: var(--radius);
+.portfolio-grid-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 18px;
+}
+
+.portfolio-item-page img {
+    border-radius: 16px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.portfolio-item-page img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #7f5eff55;
+}
+
+.portfolio-note {
     text-align: center;
-    transition: 0.25s;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.price-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--accent);
-    box-shadow: 0 0 24px #7f5eff55;
-}
-
-.price-card.featured {
-    border-color: var(--accent);
-    box-shadow: 0 0 28px #7f5eff55;
-}
-
-.price-card h3 {
-    margin-bottom: 16px;
-}
-
-.price-card p {
-    font-size: 2rem;
-    color: var(--accent);
-    text-shadow: 0 0 12px var(--accent-glow);
-    margin-bottom: 14px;
-}
-
-.price-card ul {
-    list-style: none;
+    font-size: 0.85rem;
     color: var(--text-muted);
+    margin-top: 12px;
 }
 
 /* ================================
-   TESTIMONIALS
+   WHY ME / CLIENT CARDS
 ==================================*/
 .client {
     background: var(--card);
     padding: 22px;
     border-radius: var(--radius);
     border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.2s;
+}
+
+.client strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.client p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
 .client:hover {
@@ -316,48 +324,17 @@ nav a:hover {
     outline: none;
 }
 
+.contact-form textarea {
+    min-height: 120px;
+}
+
 .contact-info p {
     margin-bottom: 12px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .contact-info a {
     color: var(--accent);
-}
-
-/* ================================
-   PORTFOLIO PAGE
-==================================*/
-.page-portfolio {
-    padding-top: 120px;
-}
-
-.portfolio-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.back-btn {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.portfolio-grid-page {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.portfolio-item-page img {
-    border-radius: 16px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.portfolio-item-page img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #7f5eff55;
 }
 
 /* ================================
@@ -396,11 +373,45 @@ nav a:hover {
     text-decoration: none;
     z-index: 999;
     transition: 0.2s;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .scroll-top:hover {
     background: var(--accent);
     box-shadow: 0 0 18px var(--accent-glow);
+}
+
+/* ================================
+   LIGHTBOX
+==================================*/
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 18px;
+    box-shadow: 0 0 26px #7f5effaa;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    font-size: 2.2rem;
+    cursor: pointer;
 }
 
 /* ================================
