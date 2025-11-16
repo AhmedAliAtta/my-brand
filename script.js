@@ -60,7 +60,7 @@ if (parallax) {
 }
 
 /* ============================
-   SMOOTH ANCHOR (للسكرول جوه الصفحة)
+   SMOOTH ANCHOR SCROLL
 =============================*/
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
